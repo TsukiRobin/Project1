@@ -1,8 +1,7 @@
 #pragma once
-#include "SDL3/SDL_rect.h"
+#include "command.h"
 #include "image.h"
 #include "levels.h"
-
 
 struct GameData {
   Image* fallback;
@@ -13,14 +12,16 @@ struct GameData {
   Memory::Arena* arena_levels;
   Memory::Arena* arena_images;
   Memory::Arena* arena_entities;
+  Memory::Arena* arena_commands;
+  CommandBuffer* commandBuffer;
   LevelData* levels;
   int currentLevelIndex;
-  LevelData* GetCurrentLevel(){
-    return &levels[currentLevelIndex];
-  }
   int levelCount;
   int currentLevel;
   bool* keys_previous;
+  LevelData* GetCurrentLevel(){
+    return &levels[currentLevelIndex];
+  }
     
 };
 

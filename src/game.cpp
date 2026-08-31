@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstring>
 #include <windows.h>
+#include <winnt.h>
 #include "game.h"
 #include "SDL3/SDL_scancode.h"
 #include "levelRenderer.h"
@@ -30,8 +31,7 @@ void Initialize(GameData* data, SDL_Renderer* renderer) {
   }
 }
 
-
-bool TryMove(Entity* mover, LevelData* level, int xDir, int yDir){
+bool TryMove(Entity *mover, LevelData *level, CommandBuffer* cmd_buffer, int xDir, int yDir) {
   if(mover->HasBehaviour(CAN_MOVE) == false){
     return false;
    }
@@ -39,24 +39,35 @@ bool TryMove(Entity* mover, LevelData* level, int xDir, int yDir){
    int test_y = mover->y + yDir;
    Entity* stepInto_entity = level->GetEntity(test_x, test_y);
    ID stepInto_tile_id = (ID)level->GetCellID(test_x, test_y);
+
+
+   
    if(stepInto_entity == nullptr){
      if (stepInto_tile_id == ID::GROUND){
-       mover->x = test_x;
-       mover->y = test_y;
-       return true;
+        MoveCommand mv;
+        mv.type = CMD_TYPE::MOVE;
+        mv.entity = mover;
+        mv.xDir = xDir;
+        mv.yDir = yDir;
+        Push(cmd_buffer, mv);
+        return true;
      }
      return false;
    }
 
    if(stepInto_entity->HasBehaviour(CAN_MOVE)){
-     if(TryMove(stepInto_entity, level, xDir, yDir)){
-       mover->x = test_x;
-       mover->y = test_y;
-       return true;
+     if(TryMove(stepInto_entity, level, cmd_buffer,xDir, yDir)){
+      MoveCommand mv;
+      mv.type = CMD_TYPE::MOVE;
+      mv.entity = mover;
+      mv.xDir = xDir;
+      mv.yDir = yDir;
+      Push(cmd_buffer, mv);
+      return true;
+       
      }
    }
    return false;
-   
 }
 
 bool KeyPressed(SDL_Scancode key, const bool* current, const bool* previous){
@@ -117,12 +128,19 @@ void Update(GameData* data, float dt){
       else if(KeyPressed(SDL_SCANCODE_DOWN, keys, data->keys_previous)){
         yChange = 1;
       }    
-    
-  
+
+      if(KeyPressed(SDL_SCANCODE_Z, keys, data->keys_previous)){
+        if(KeyHeld(SDL_SCANCODE_LSHIFT, keys, data->keys_previous)){
+          Redo(data->commandBuffer);
+      }
+        else{
+          Undo(data->commandBuffer);
+      }
+  }
 
 
     if (xChange != 0 || yChange != 0){
-      TryMove(entity, data->GetCurrentLevel(), xChange, yChange);
+      TryMove(entity, data->GetCurrentLevel(), data->commandBuffer, xChange, yChange);
       }
     }
 

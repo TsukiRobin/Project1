@@ -3,10 +3,10 @@
 #include <cassert>
 
 enum Behaviour : uint32_t {
-  NONE = 0,
-  CAN_MOVE = 1 << 0,
-  IS_PLAYER = 1 << 1,
-  RESPOND_TO_INPUT = 1 << 2
+  NONE = 0, // 1
+  CAN_MOVE = 1 << 0, // 2
+  IS_PLAYER = 1 << 1, // 4
+  RESPOND_TO_INPUT = 1 << 2 // 8
 };
 
 

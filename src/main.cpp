@@ -195,7 +195,16 @@ int main(){
 // Skapa en subarena för våra levels, entities och initiera dom.
 	gameData->arena_levels = Memory::CreateSubArena(arena_main, MEGABYTES(3));
 	gameData->arena_entities = Memory::CreateSubArena(gameData->arena_levels, MEGABYTES(1));
-	gameData->levels = (LevelData*)Memory::Allocate(gameData->arena_levels, sizeof(LevelData) * 12);
+	gameData->arena_commands = Memory::CreateSubArena(gameData->arena_levels, MEGABYTES(1));
+	gameData->commandBuffer = (CommandBuffer*)Memory::Allocate(arena_main, sizeof(CommandBuffer));
+	gameData->commandBuffer->capacity = 2000;
+	size_t COMMAND_SIZE = sizeof(AnyCommand) * gameData->commandBuffer->capacity;
+	gameData->commandBuffer->allCommands = (AnyCommand*)Memory::Allocate(gameData->arena_commands, COMMAND_SIZE);
+	
+
+
+	gameData->levelCount = 5;	
+	gameData->levels = (LevelData*)Memory::Allocate(gameData->arena_levels, sizeof(LevelData) * gameData->levelCount);
 // Initiera en del i våran arena_levels för att spara våra knapptryck.
 	gameData->keys_previous = (bool*)Memory::Allocate(gameData->arena_levels, sizeof(bool) * SDL_SCANCODE_COUNT);
 	
