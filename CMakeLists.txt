@@ -5,7 +5,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(DLL_NAME ${PROJECT_NAME}_game)
 set(DIR_ASSETS_ORIGIN ${CMAKE_SOURCE_DIR}/assets)
 set(DIR_ASSETS_DESTINATION $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets)
-
+set(IMGUI
+	src_external/imgui/imgui.cpp
+	src_external/imgui/imgui_draw.cpp
+	src_external/imgui/imgui_tables.cpp
+	src_external/imgui/imgui_widgets.cpp
+	src_external/imgui/imgui_impl_sdlrenderer3.cpp
+	src_external/imgui/imgui_impl_sdl3.cpp
+)
 # Filer som BARA .exe ska ha (dessa filtreras sedan bort från DLL:en)
 set(EXE_EXCLUSIVE
 	${CMAKE_SOURCE_DIR}/src/main.cpp
@@ -27,13 +34,13 @@ list(REMOVE_ITEM DLL_EXCLUSIVE ${EXE_EXCLUSIVE})
 
 
 # EXE (Här la vi nu till SHARED_SOURCES!)
-add_executable(${PROJECT_NAME} ${EXE_EXCLUSIVE} ${SHARED_SOURCES})
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+add_executable(${PROJECT_NAME} ${EXE_EXCLUSIVE} ${SHARED_SOURCES} ${IMGUI})
+target_include_directories(${PROJECT_NAME} PRIVATE include src_external)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${LIB_FILES})
 
 # Game DLL
-add_library(${DLL_NAME} SHARED ${DLL_EXCLUSIVE})
-target_include_directories(${DLL_NAME} PRIVATE include)
+add_library(${DLL_NAME} SHARED ${DLL_EXCLUSIVE} ${IMGUI})
+target_include_directories(${DLL_NAME} PRIVATE include src_external)
 target_link_libraries(${DLL_NAME} PRIVATE ${LIB_FILES})
 
 #Windows Libraries
