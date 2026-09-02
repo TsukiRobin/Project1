@@ -23,16 +23,7 @@ void RenderLevel(GameData* gameData, SDL_Renderer* renderer){
           break;
         case 3:
           sprite = gameData->wall;
-          break;
-
-        case int(ID::PLAYER):
-          sprite = gameData->player;
-          break;                    
-
-        // case int(ID::BOX):
-        //   sprite = gameData->box;
-        //   break;
-          
+          break;          
         default:        
           sprite = gameData->fallback;
           break;

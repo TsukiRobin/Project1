@@ -5,6 +5,7 @@
 #include "arena.h"
 #include "Parsers/json.hpp"
 #include "entity.h"
+#include "common.h"
 using namespace std;
 
 
@@ -86,8 +87,7 @@ void CreateEntities(Arena* arena, LevelData* lvl_data){
     }
   }
 
-  lvl_data->entityBuffer = (Entity*)Memory::Allocate(
-  arena, sizeof(Entity) * lvl_data->entityCount);
+  lvl_data->entityBuffer = ALLOC_ARRAY(arena, Entity, lvl_data->entityCount);
   int index = 0;
   for (int i = 0; i < lvl_data->w * lvl_data->h; i++){
     unsigned char entity_id = entityData[i];

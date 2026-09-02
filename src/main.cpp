@@ -9,6 +9,7 @@
 #include "SDL3/SDL_keycode.h"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_timer.h"
+#include "command.h"
 #include "common.h"
 #include "arena.h"
 #include "gameState.h"
@@ -188,7 +189,7 @@ int main(){
 	printf("Allocating Game Memory\n");
 	Memory::Arena* arena_main = new Memory::Arena();
 	Memory::Initialize(arena_main, game_memory, GAME_MEMORY_ALLOWANCE);
-	GameData* gameData = (GameData*)Memory::Allocate(arena_main, sizeof(GameData));
+	GameData* gameData = ALLOC(arena_main, GameData);
 	size_t IMAGE_ARENA_SIZE = sizeof(Image) * 1024;
 // >Skapa en subarena för images och initiera dom.
 	gameData->arena_images = Memory::CreateSubArena(arena_main, IMAGE_ARENA_SIZE);
@@ -196,7 +197,7 @@ int main(){
 	gameData->arena_levels = Memory::CreateSubArena(arena_main, MEGABYTES(3));
 	gameData->arena_entities = Memory::CreateSubArena(gameData->arena_levels, MEGABYTES(1));
 	gameData->arena_commands = Memory::CreateSubArena(gameData->arena_levels, MEGABYTES(1));
-	gameData->commandBuffer = (CommandBuffer*)Memory::Allocate(arena_main, sizeof(CommandBuffer));
+	gameData->commandBuffer = ALLOC(arena_main, CommandBuffer);
 	gameData->commandBuffer->capacity = 2000;
 	size_t COMMAND_SIZE = sizeof(AnyCommand) * gameData->commandBuffer->capacity;
 	gameData->commandBuffer->allCommands = (AnyCommand*)Memory::Allocate(gameData->arena_commands, COMMAND_SIZE);

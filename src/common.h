@@ -3,6 +3,10 @@
 #define KILOBYTES(n) ((size_t)n * 1024)
 #define MEGABYTES(n) (KILOBYTES(n) * 1024)
 #define GIGABYTES(n) (MEGABYTES(n) * 1024)
+#define ALLOC(arena, type) (type*)Memory::Allocate((arena), sizeof(type));
+#define ALLOC_ARRAY(arena, type, count) (type*)Memory::Allocate((arena), sizeof(type) * count);
+
+
 
 constexpr size_t GAME_MEMORY_ALLOWANCE = MEGABYTES(10);
 constexpr int FPS = 240;
