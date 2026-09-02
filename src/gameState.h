@@ -5,6 +5,7 @@
 #include "levels.h"
 
 struct GameData {
+  uint32_t command_timestamp;
   const float* dt;
   ImGuiContext* imGui_context;
   Image* fallback;

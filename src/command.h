@@ -10,6 +10,7 @@ enum class CMD_TYPE: uint8_t {
 
 struct Command {
   CMD_TYPE type;
+  uint32_t timestamp;
 };
 
 struct MoveCommand : Command {
@@ -35,6 +36,6 @@ struct CommandBuffer{
   int head;
 };
 
-void Push(CommandBuffer* buffer, AnyCommand cmd);
+void Push(CommandBuffer* buffer, AnyCommand cmd, uint32_t timestamp);
 void Undo(CommandBuffer* buffer);
 void Redo(CommandBuffer* buffer);
