@@ -29,14 +29,14 @@ Image* AssetManagement::LoadSprite(Memory::Arena* arena, SDL_Renderer* renderer,
   // Säkerställ att surface inte är en nullptr och faktiskt har ett värde
   printf("30");
   assert(surface != nullptr);
-  
+  printf("Fungerar fint att ladda in Surface\n");
   // konvertera surface som hanteras av CPU till texure som hanteras av GPU
   // Men vi måste använda SDL_DestroySurface() för att frigöra minnet som allokerades
   // till surface
   SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
 
   if (texture == nullptr){
-    printf("Kunde inte skapa textur");
+    printf("Kunde inte skapa textur\n");
     SDL_DestroySurface(surface);
     return nullptr;
   }

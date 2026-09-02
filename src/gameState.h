@@ -1,9 +1,12 @@
 #pragma once
 #include "command.h"
 #include "image.h"
+#include "imgui/imgui_internal.h"
 #include "levels.h"
 
 struct GameData {
+  const float* dt;
+  ImGuiContext* imGui_context;
   Image* fallback;
   Image* wall;
   Image* ground;

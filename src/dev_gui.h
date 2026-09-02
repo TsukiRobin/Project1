@@ -10,6 +10,6 @@
 namespace DEV{
   void Initialize(SDL_Window* window, SDL_Renderer* renderer);
   void ProcessEvents(SDL_Event* event);
-  void PreDraw();
+  void PreDraw(ImGuiContext* saved_context);
   void Draw(GameData* data, SDL_Renderer* renderer);
 }

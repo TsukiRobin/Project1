@@ -25,13 +25,13 @@ Uint64 PREV = 0;
 const char* projectName = "Project1";
 
 constexpr const char* NAME_OF_DLL = "project1_game.dll";
-constexpr const char *NAME_OF_TEMP_DLL =  "project1_temp.dll";
+constexpr const char* NAME_OF_TEMP_DLL =  "project1_temp.dll";
 
 // 
 // Om jag i framtiden hämtar en minnesadress till en funktion
 // och jag säger att det är av typen Function_Initialize
 // då ska kompilatorn lita på vad jag definerar att den tar och returnerar
-typedef void (*Function_Initialize) (GameData* data, SDL_Renderer* renderer);
+typedef void (*Function_Initialize) (GameData* data,SDL_Window* window, SDL_Renderer* renderer);
 typedef bool (*Function_HandleEvents) (GameData* data, SDL_Event event);
 typedef void (*Function_Update) (GameData* data, float dt);
 typedef void (*Function_Draw) (GameData* data, SDL_Renderer* renderer);
@@ -232,14 +232,14 @@ int main(){
 	}
  // Sätter upp vårat fönster och initierar våran dll fil.
  	printf("Initializing dll\n");
-	dll.initialize(gameData, renderer);
+	dll.initialize(gameData,window, renderer);
 
 
 // sätter en variable för våran game loop.
 	printf("Setting bool running to true\n");
 	bool running = true;
 	float dt;
-
+	gameData->dt = &dt;
 	while(running){
 
 		DLL_CheckStatus(&dll);
