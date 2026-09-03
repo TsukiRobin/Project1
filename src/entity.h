@@ -18,13 +18,20 @@ enum class ID : uint8_t {
   BOX = 4
 };
 
-
+struct Position{
+  int x;
+  int y;
+};
 
 struct Entity {
   ID  id;
   int x;
   int y;
+  int x_prev;
+  int y_prev;
+  float progress_01;
   Behaviour behaviour;
+
 
   bool HasBehaviour(Behaviour flags){
     return (behaviour & flags) == flags;
@@ -59,3 +66,4 @@ struct Entity {
   }
 };
 
+  bool IsMoving(Entity* e);

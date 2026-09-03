@@ -73,6 +73,12 @@
 },
 {
   "directory": "C:/PROJECTS/Project1/build",
+  "command": "\"C:\\Program Files\\LLVM\\bin\\clang++.exe\" -DProject1_game_EXPORTS -IC:/PROJECTS/Project1/include -IC:/PROJECTS/Project1/src_external -O0 -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -o CMakeFiles\\Project1_game.dir\\src\\entity.cpp.obj -c C:\\PROJECTS\\Project1\\src\\entity.cpp",
+  "file": "C:/PROJECTS/Project1/src/entity.cpp",
+  "output": "C:/PROJECTS/Project1/build/CMakeFiles/Project1_game.dir/src/entity.cpp.obj"
+},
+{
+  "directory": "C:/PROJECTS/Project1/build",
   "command": "\"C:\\Program Files\\LLVM\\bin\\clang++.exe\" -DProject1_game_EXPORTS -IC:/PROJECTS/Project1/include -IC:/PROJECTS/Project1/src_external -O0 -std=gnu++20 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -o CMakeFiles\\Project1_game.dir\\src\\game.cpp.obj -c C:\\PROJECTS\\Project1\\src\\game.cpp",
   "file": "C:/PROJECTS/Project1/src/game.cpp",
   "output": "C:/PROJECTS/Project1/build/CMakeFiles/Project1_game.dir/src/game.cpp.obj"

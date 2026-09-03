@@ -3,6 +3,7 @@
 #include "image.h"
 #include "imgui/imgui_internal.h"
 #include "levels.h"
+#include "entity.h"
 
 struct GameData {
   uint32_t command_timestamp;
@@ -26,6 +27,11 @@ struct GameData {
   LevelData* GetCurrentLevel(){
     return &levels[currentLevelIndex];
   }
+
+  Position* input_buffer;
+  int input_buffer_capacity;
+  int input_buffer_write_count;
+  int input_buffer_read_count;
     
 };
 
