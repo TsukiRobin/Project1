@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\PROJECTS\\Project1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\levels.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\levels.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\levels.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\levels.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PROJECTS\\Project1\\src\\rendering.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\rendering.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -27,19 +51,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "rendering.cpp",
-              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\rendering.cpp",
-              "RelativeDocumentMoniker": "src\\rendering.cpp",
-              "ToolTip": "C:\\PROJECTS\\Project1\\src\\rendering.cpp*",
-              "RelativeToolTip": "src\\rendering.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\PROJECTS\\Project1\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-03T07:24:18.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\main.cpp",
+              "RelativeDocumentMoniker": "src\\main.cpp",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\main.cpp",
+              "RelativeToolTip": "src\\main.cpp",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAAABcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-02T06:19:22.653Z",
+              "WhenOpened": "2026-09-03T06:58:35.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "game.h",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\game.h",
+              "RelativeDocumentMoniker": "src\\game.h",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\game.h",
+              "RelativeToolTip": "src\\game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-03T06:58:26.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "levels.h",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\levels.h",
+              "RelativeDocumentMoniker": "src\\levels.h",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\levels.h",
+              "RelativeToolTip": "src\\levels.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-03T06:58:19.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "levels.cpp",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\levels.cpp",
+              "RelativeDocumentMoniker": "src\\levels.cpp",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\levels.cpp",
+              "RelativeToolTip": "src\\levels.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-03T06:54:43.328Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\game.cpp",
+              "RelativeDocumentMoniker": "src\\game.cpp",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\game.cpp",
+              "RelativeToolTip": "src\\game.cpp",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAuwLUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-03T06:43:38.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "rendering.cpp",
+              "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\rendering.cpp",
+              "RelativeDocumentMoniker": "src\\rendering.cpp",
+              "ToolTip": "C:\\PROJECTS\\Project1\\src\\rendering.cpp",
+              "RelativeToolTip": "src\\rendering.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-02T06:19:22.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "arena.cpp",
               "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\arena.cpp",
               "RelativeDocumentMoniker": "src\\arena.cpp",
@@ -47,12 +149,11 @@
               "RelativeToolTip": "src\\arena.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-08-31T08:43:44.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T08:43:44.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "arena.h",
               "DocumentMoniker": "C:\\PROJECTS\\Project1\\src\\arena.h",
               "RelativeDocumentMoniker": "src\\arena.h",

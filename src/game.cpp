@@ -114,15 +114,15 @@ void Update(GameData* data, float dt){
 
   const bool* keys = SDL_GetKeyboardState(nullptr);
 
-      if(KeyPressed(SDL_SCANCODE_Z, keys, data->keys_previous)){
-        if(KeyHeld(SDL_SCANCODE_LSHIFT, keys, data->keys_previous)){
+  if (KeyPressed(SDL_SCANCODE_Z, keys, data->keys_previous)) {
+      if (KeyHeld(SDL_SCANCODE_LSHIFT, keys, data->keys_previous)) {
           Redo(data->commandBuffer);
       }
-        else{
+      else {
           Undo(data->commandBuffer);
       }
 
-
+  }
       if(KeyPressed(SDL_SCANCODE_RIGHT, keys, data->keys_previous)){
         data->input_buffer[data->input_buffer_write_count++ % data->input_buffer_capacity]
         = {1, 0};
@@ -179,7 +179,7 @@ void Update(GameData* data, float dt){
         }
         data->input_buffer_read_count++;
       }
-  }
+
 
 }
 
