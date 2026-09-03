@@ -17,4 +17,7 @@ const int SCREEN_HEIGHT = 800;
 const int UPSCALE_FACTOR = 2;
 const int CELL_SIZE_PX = 32 * UPSCALE_FACTOR;
 
+const float MOVE_SPEED = 6.0;
+
+
 

@@ -200,12 +200,16 @@ int main(){
 	gameData->commandBuffer = ALLOC(arena_main, CommandBuffer);
 	gameData->commandBuffer->capacity = 2000;
 	size_t COMMAND_SIZE = sizeof(AnyCommand) * gameData->commandBuffer->capacity;
-	gameData->commandBuffer->allCommands = (AnyCommand*)Memory::Allocate(gameData->arena_commands, COMMAND_SIZE);
+	gameData->commandBuffer->allCommands = ALLOC_ARRAY(gameData->arena_commands, AnyCommand, COMMAND_SIZE);
 	
-
+	gameData->input_buffer_capacity = 50;
+	size_t RING_BUFFER_SIZE = sizeof(Position) * gameData->input_buffer_capacity;
+	// gameData->input_buffer = ALLOC_ARRAY(gameData->arena_levels, Position, RING_BUFFER_SIZE);
+	gameData->input_buffer = (Position*)Memory::Allocate(gameData->arena_levels, RING_BUFFER_SIZE);
 
 	gameData->levelCount = 5;	
 	gameData->levels = (LevelData*)Memory::Allocate(gameData->arena_levels, sizeof(LevelData) * gameData->levelCount);
+
 // Initiera en del i våran arena_levels för att spara våra knapptryck.
 	gameData->keys_previous = (bool*)Memory::Allocate(gameData->arena_levels, sizeof(bool) * SDL_SCANCODE_COUNT);
 	
@@ -274,6 +278,8 @@ int main(){
 
 // ut det på skärmen med (draw)
 		dll.update(gameData, dt);
+
+		memcpy((void*)gameData->keys_previous, SDL_GetKeyboardState(nullptr), SDL_SCANCODE_COUNT * sizeof(bool));
 		dll.draw(gameData, renderer);
 
 
